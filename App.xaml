@@ -1,0 +1,19 @@
+﻿<Application x:Class="MvvmProject1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MvvmProject1"
+             xmlns:views ="clr-namespace:MvvmProject1.Views"
+             xmlns:viewmodels ="clr-namespace:MvvmProject1.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:MainCalculatorViewModel}">
+            <views:MainCalculatorView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:ConverterViewModel}">
+            <views:ConverterView/>
+        </DataTemplate>
+        
+
+
+    </Application.Resources>
+</Application>

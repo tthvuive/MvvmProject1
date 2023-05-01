@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="MvvmProject1.Views.MainCalculatorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MvvmProject1.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="400">
+
+    <Grid Background="Pink">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition Height="1.5*" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ContentControl Content="{Binding SelectViewModel}"/>
+
+        <TextBlock Name ="tb" Text="" FontSize="50" Background="Pink" Grid.ColumnSpan="5"  Grid.Row="1"  Grid.RowSpan="2" ></TextBlock>
+
+        <Button Name="But0"  Content="0" FontSize="20" Grid.ColumnSpan="2"  Grid.Column="0" Grid.Row="6" ></Button>
+        <Button Name="ButPoint" Content="." FontSize="20" Grid.ColumnSpan="1"  Grid.Column="2" Grid.Row="6" ></Button>
+        <Button Name="ButEqual" Content="=" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="4" Grid.Row="6" ></Button>
+
+
+        <!--# hang 2-->
+        <Button Name="But1" Content="1" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="0" Grid.Row="5"  ></Button>
+        <Button Name="But2" Content="2" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="1" Grid.Row="5"  ></Button>
+        <Button Name="But3" Content="3" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="2" Grid.Row="5"  ></Button>
+        <Button Name="ButSum" Content="+" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="3" Grid.Row="5"  ></Button>
+
+        <!--# hang 3-->
+        <Button Name="But4" Content="4" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="0" Grid.Row="4" ></Button>
+        <Button Name="But5" Content="5" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="1" Grid.Row="4" ></Button>
+        <Button Name="But6" Content="6" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="2" Grid.Row="4"  ></Button>
+        <Button Name="ButSub" Content="-" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="3" Grid.Row ="4"></Button>
+
+        <!--# hang 4-->
+        <Button Name="But7" Content="7" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="0" Grid.Row="3" ></Button>
+        <Button Name="But8" Content="8" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="1" Grid.Row="3" ></Button>
+        <Button Name="But9" Content="9" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="2" Grid.Row="3" ></Button>
+        <Button Name="ButPow" Content="*" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="3" Grid.Row="3" ></Button>
+
+        <!--# hang 5-->
+        <Button Name="ButAC" Content="AC" FontSize="20" Grid.ColumnSpan="2"  Grid.Column="0" Grid.Row="2"  ></Button>
+        <Button Name="ButPos" Content="+/-" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="2" Grid.Row="2" ></Button>
+        <Button Name="ButDiv" Content="/" FontSize="20" Grid.ColumnSpan="1"  Grid.Column="3" Grid.Row="2" ></Button>
+
+        <Button Background="Black" Content="Converter" Command="{Binding UpdateViewCommand}" CommandParameter="Converter"></Button>
+    </Grid>
+   
+</UserControl>
